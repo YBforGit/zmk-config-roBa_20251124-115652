@@ -59,12 +59,12 @@
         };
 
         go_to_controls_layer_right {
-            bindings = <&mo 8>;
+            bindings = <&mo 7>;
             key-positions = <40 41>;
         };
 
         go_to_controls_layer_left {
-            bindings = <&mo 8>;
+            bindings = <&mo 7>;
             key-positions = <38 37>;
         };
     };
@@ -189,19 +189,6 @@
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        SCROLLold {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
-            >;
-
-            // この記述をmscに設定する
-
-            sensor-bindings = <&encoder_msc_down_up>;
-        };
-
         bluetooth_layer {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
@@ -219,7 +206,7 @@
             bindings = <
 &kp F1              &kp F2              &kp F3            &kp F4                &kp F5                              &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
 &trans              &trans              &trans            &kp LG(LS(NUMBER_4))  &kp F6          &trans      &trans  &trans  &trans  &trans  &trans   &kp F12
-&kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT_ARROW)   &kp LG(LS(N5))  &mo 7       &trans  &trans  &trans  &trans  &trans   &trans
+&kp LC(LEFT_ARROW)  &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT_ARROW)   &kp LG(LS(N5))  &mo 6       &trans  &trans  &trans  &trans  &trans   &trans
 &trans              &trans              &trans            &trans                &trans          &trans      &trans  &trans                           &trans
             >;
 
