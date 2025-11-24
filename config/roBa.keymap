@@ -57,6 +57,16 @@
             bindings = <&custom_mouse_hold_tap 5 MB2>;
             key-positions = <13 12>;
         };
+
+        go_to_controls_layer_right {
+            bindings = <&mo 8>;
+            key-positions = <40 41>;
+        };
+
+        go_to_controls_layer_left {
+            bindings = <&mo 8>;
+            key-positions = <38 37>;
+        };
     };
 
     macros {
