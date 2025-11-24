@@ -49,8 +49,13 @@
         };
 
         mouse_gesture_like_trackpad {
-            bindings = <&custom_mouse_hold_tap 6 MB2>;
+            bindings = <&custom_mouse_hold_tap 5 MB2>;
             key-positions = <19 18>;
+        };
+
+        mouse_gesture_like_trackpad_lft {
+            bindings = <&custom_mouse_hold_tap 5 MB2>;
+            key-positions = <13 12>;
         };
     };
 
