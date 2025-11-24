@@ -67,6 +67,16 @@
             bindings = <&mo 7>;
             key-positions = <38 37>;
         };
+
+        go_to_controls_layer_right_2 {
+            bindings = <&mo 7>;
+            key-positions = <41 28>;
+        };
+
+        go_to_bluetooth_layer {
+            bindings = <&mo 6>;
+            key-positions = <26 27>;
+        };
     };
 
     macros {
