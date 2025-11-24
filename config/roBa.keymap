@@ -47,6 +47,11 @@
             bindings = <&kp SEMICOLON>;
             key-positions = <20 21>;
         };
+
+        mouse_gesture_like_trackpad {
+            bindings = <&custom_mouse_hold_tap 5 MB1>;
+            key-positions = <19 18>;
+        };
     };
 
     macros {
