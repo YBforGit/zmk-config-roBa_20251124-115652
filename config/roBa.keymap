@@ -80,14 +80,13 @@
             tapping-term-ms = <200>;
         };
 
-        lt_to_command: lt_to_command {
+        custom_mouse_hold_tap: custom_mouse_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_TO_COMMAND";
-            bindings = <&kp>, <&kp>;
+            label = "CUSTOM_MOUSE_HOLD_TAP";
+            bindings = <&mo>, <&mkp>;
 
             #binding-cells = <2>;
-            hold-trigger-key-positions = <10>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -96,10 +95,10 @@
 
         default_layer {
             bindings = <
-&lt_to_command ESCAPE Q  &kp W               &kp E         &kp R                   &kp T                                                     &kp Y        &kp U  &kp I      &kp O    &kp P
-&mt LEFT_COMMAND A       &mt LEFT_COMMAND S  &kp D         &kp F                   &kp G          &mkp MB1                    &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z         &mt LEFT_SHIFT X    &kp C         &kp V                   &kp B          &kp COLON                   &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&mt LEFT_SHIFT LANG2     &kp LEFT_CONTROL    &kp LEFT_ALT  &lt_to_layer_0 1 LANG2  &kp BACKSPACE  &lt_to_layer_0 1 SPACE      &kp ENTER      &lt 1 LANG1                             &lt_to_layer_0 1 LANG1
+&none                 &kp W               &kp E         &kp R                   &kp T                                                     &kp Y        &kp U  &kp I      &kp O    &kp P
+&mt LEFT_COMMAND A    &mt LEFT_COMMAND S  &kp D         &kp F                   &kp G          &mkp MB1                    &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
+&mt LEFT_SHIFT Z      &mt LEFT_SHIFT X    &kp C         &kp V                   &kp B          &kp COLON                   &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT LANG2  &kp LEFT_CONTROL    &kp LEFT_ALT  &lt_to_layer_0 1 LANG2  &kp BACKSPACE  &lt_to_layer_0 1 SPACE      &kp ENTER      &lt 1 LANG1                             &lt_to_layer_0 1 LANG1
             >;
 
             // この記述をmscに設定する
