@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // #includeのあとのあたりにスクロール量変更の定義を追記
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
     flavor = "balanced";
@@ -47,6 +47,11 @@
             bindings = <&kp SEMICOLON>;
             key-positions = <20 21>;
         };
+
+        scroll_like_trackpad {
+            bindings = <&msc MOVE_X(10)>;
+            key-positions = <18 19>;
+        };
     };
 
     macros {
@@ -61,13 +66,16 @@
     behaviors {
         // combosやmacrosと同じ階層に以下のbihaviorsを追記
         // スクロール方向を逆にしたい場合は <&msc SCRL_DOWN> と <&msc SCRL_UP> を入れ替えてください
+
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -75,16 +83,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        lt_to_command: lt_to_command {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_TO_COMMAND";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <10>;
-            tapping-term-ms = <220>;
         };
     };
 
@@ -100,6 +98,7 @@
             >;
 
             // この記述をmscに設定する
+
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
