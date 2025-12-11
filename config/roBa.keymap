@@ -82,6 +82,11 @@
             bindings = <&kp LG(LEFT_SHIFT)>;
             key-positions = <21 33>;
         };
+
+        escape_eisuu {
+            bindings = <&vim_escape_and_eisuu>;
+            key-positions = <42 18>;
+        };
     };
 
     macros {
@@ -90,6 +95,13 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        vim_escape_and_eisuu: vim_escape_and_eisuu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ESCAPE &kp LANGUAGE_2>;
+            label = "VIM_ESCAPE_AND_EISUU";
         };
     };
 
